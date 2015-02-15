@@ -26,5 +26,5 @@
 *.out
 *.app
 
-# The app itself
+# The program itself
 sieve
