@@ -1,15 +1,19 @@
+// For the std namespace
 #include <iostream>
-#include <cstdlib>
+// For the low-memory container
 #include <bitset>
-#include <string>
-#include <climits>
+// For the vector itself
 #include <vector>
+// For the sqrt function 
 #include <cmath>
 
+
+// I'm lazy to write std:: every time
 using namespace std;
 
 typedef unsigned long long int ull;
 
+// The largest number "up-to" we find primes
 #define PRIME_MAX 10000000
 
 // Generate primes up to "TO".
@@ -58,6 +62,7 @@ vector<ull> sieve(const ull TO){
     return primes;
 }
 
+// The main entry point of the program
 int main (int argc, char * argv[]) {
     ull limit = 100;
 
@@ -72,6 +77,7 @@ int main (int argc, char * argv[]) {
         limit = PRIME_MAX;
     }
 
+    // We'll keep all primes we find in here
     vector<ull> primes;
     primes = sieve(limit);
 
