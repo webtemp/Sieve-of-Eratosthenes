@@ -61,8 +61,15 @@ vector<ull> sieve(const ull TO){
 int main (int argc, char * argv[]) {
     ull limit = 100;
 
+    // If a arg was passed, use it
     if( argc > 1){
         limit = strtoull(argv[1], NULL, 10);
+    }
+
+    // If the user's passed a bigger value fall back to the original;
+    if ( limit > PRIME_MAX ) {
+        cout << limit << " is too big for this programi. Lowering it to: " << PRIME_MAX << "\n";
+        limit = PRIME_MAX;
     }
 
     vector<ull> primes;
